@@ -4,8 +4,15 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-on early-init && property:ro.boot.product.hardware.sku=6
-    setprop ro.boot.product.vendor.sku nfc
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
+    override
+    class early_hal
+    user nfc
+    group nfc
+    disabled
 
-on early-init && property:ro.boot.product.hardware.sku=14
-    setprop ro.boot.product.vendor.sku nfc
+on boot && property:ro.boot.product.hardware.sku=6
+    enable vendor.nfc_hal_service
+
+on boot && property:ro.boot.product.hardware.sku=14
+    enable vendor.nfc_hal_service
