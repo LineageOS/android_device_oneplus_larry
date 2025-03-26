@@ -1002,6 +1002,9 @@ vendor/firmware/ipa_fws.b04
 vendor/firmware/ipa_fws.elf
 vendor/firmware/ipa_fws.mdt
 
+# NFC - from CPH2465_14.0.0.901(EX01)
+odm/etc/nfc/libnfc-nxp_RF.conf_22872:vendor/libnfc-nxp_RF.conf|ec64a0478bec5024aa9eeab6bf15b2c6a6c66369
+
 # Sensors
 odm/etc/sensor.cfg
 odm/etc/sensor/config/alsps.json
