@@ -33,7 +33,7 @@ PRODUCT_PACKAGES += \
     init.device.rc
 
 # LiveDisplay
-$(call soong_config_set,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
+$(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
 
 # NFC
 PRODUCT_COPY_FILES += \
